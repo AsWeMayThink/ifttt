@@ -7,7 +7,6 @@ dotenv.config();
 const key = process.env.key;
 
 function triggerIftttWebhook(event, key, value1, value2, value3) {
-  console.log(key);
   let iftttNotificationUrl = `https://maker.ifttt.com/trigger/${event}/with/key/${key}`;
   let postData = JSON.stringify({ value1, value2, value3 });
 
